@@ -20,6 +20,8 @@ public class Main {
         Boolean villagerKilled;
         Boolean enterCave;
         String fightOption;
+        Boolean goblinKilled;
+        Boolean outlaw;
 
         do {
             System.out.println("What class do you want to be?");
@@ -69,7 +71,7 @@ public class Main {
 
 
         System.out.println("Your adventure starts now!");
-
+        line();
         System.out.println("You see a cyanide pill in the distance.");
         System.out.println("Do you want to take it? Type y or n.");
         choice = scan.nextLine();
@@ -81,7 +83,7 @@ public class Main {
         else {
             System.out.println("You decide not to take the pills and carry on.");
         }
-
+        line();
         System.out.println("You see a man in the distance.");
         System.out.println("Type fight to fight or talk to talk");
         choice = scan.nextLine();
@@ -104,7 +106,7 @@ public class Main {
             System.out.println("You decide to do nothing and you don't talk to him.");
             villagerKilled = false;
         }
-
+        line();
         System.out.println("You see a cave in the distance, do you want to go into it?");
         System.out.println("Type y or n.");
         choice = "";
@@ -133,13 +135,53 @@ public class Main {
                 if(goblinHealth > 0) {
                     System.out.println("The goblin attacks!");
                     health = method.damage(health, 10, defense);
-                    System.out.println("You have " + health + " health left.");
                 }
                 else {
                     System.out.println("The goblin is dead!");
                 }
-                System.out.println("The goblin has " + goblinHealth + " health left.");
+                System.out.println("You have " + health + " health left.");
             }while(goblinHealth > 0);
+            goblinKilled = true;
+        }
+        else {
+            goblinKilled = false;
+            System.out.println("You decide not to go into the cave and carry on.");
+        }
+        line();
+        if (goblinKilled) {
+            System.out.println("You see light in the distance. It's the end of the tunnel!");
+            System.out.println("You exit the tunnel and see a beautiful pasture.");
+            System.out.println("You can just make out the outline of a village in the distance.");
+        }
+        else {
+            System.out.println("As you go over a hill, you can just make out a village in the distance.");
+        }
+        System.out.println("You approach the village and a woman approaches you.");
+        System.out.println("Villager: Hello! Traveller, have you seen my husband? He was just beyond that cave!");
+        if(villagerKilled) {
+            System.out.println("Villager: Oh my, whats the blood on your weapon? No... no it can't be! Guards!");
+            outlaw = true;
+            System.out.println("Great job, you're an outlaw now.");
+        }
+        else {
+            System.out.println("Villager: Good day sir! Did you notice any goblins in that cave by the way? We have an infestation it seems.");
+            if(goblinKilled) {
+                System.out.println("Villager: Oh my! I see, you sir have my gratitude! Please take this sword!");
+                line();
+                if(userClass.equals("Knight") || userClass.equals("Rouge")) {
+                    attack = attack + 50;
+                    System.out.println("You receive a better sword! + 50 attack.");
+                }
+                else {
+                    System.out.println("Villager: Oh I see, you have no need for this. Well at least take this armor then!");
+                    speed = speed + 10;
+                    System.out.println("You receive lighter armor! + 10 speed.");
+                }
+
+            }
+            else {
+                System.out.println("Villager: Hmm I see, you did not slay the beast.");
+            }
         }
     }
 
@@ -173,5 +215,8 @@ public class Main {
         else {
             return 0;
         }
+    }
+    private static void line() {
+        System.out.println("+---------------------------------------------------------------------------+");
     }
 }
