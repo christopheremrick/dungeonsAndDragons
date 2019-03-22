@@ -82,7 +82,7 @@ public class Main {
             villagerKilled = true;
         }
         else if(choice.equals("talk")) {
-            System.out.println("Thanks for not killing me dude. Here, take this!");
+            System.out.println("Villager: Thanks for not killing me dude. Here, take this!");
             System.out.println("You receive better armor. + 50 defense.");
             defense = defense  + 50;
             villagerKilled = false;

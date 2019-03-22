@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="668fbcc8-d0e1-4783-b985-277cd474f3f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/ChristopherEmrick/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ChristopherEmrick/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="668fbcc8-d0e1-4783-b985-277cd474f3f5" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,10 +14,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ChristopherEmrick/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
+            <state relative-caret-position="340">
+              <caret line="20" column="71" lean-forward="true" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
               <folding>
-                <element signature="e#3845#3846#0" expanded="true" />
+                <element signature="e#3853#3854#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,7 +52,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553221351685" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553221582784" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunDashboard">
@@ -134,10 +132,10 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/ChristopherEmrick/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="75" column="37" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
+        <state relative-caret-position="340">
+          <caret line="20" column="71" lean-forward="true" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
           <folding>
-            <element signature="e#3845#3846#0" expanded="true" />
+            <element signature="e#3853#3854#0" expanded="true" />
           </folding>
         </state>
       </provider>
