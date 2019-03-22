@@ -10,6 +10,9 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         String userClass= "";
+        Integer health = 0;
+        Integer defense = 0;
+        Integer mana = 0;
 
         do {
             System.out.println("What class do you want to be?");
@@ -17,16 +20,27 @@ public class Main {
             userClass = scan.nextLine();
 
             if (userClass.equals("Knight")) { // Knight class stats
+                health = 150;
+                defense = 150;
+                mana = 0;
 
             }
             else if (userClass.equals("Rouge")) { // Rouge class stats
-
+                health = 50;
+                defense = 50;
+                mana = 0;
 
             }
             else if (userClass.equals("Archer")) { // Archer class stats
+                health = 100;
+                defense = 100;
+                mana = 0;
 
             }
             else if (userClass.equals("Mage")) { // Mage class stats
+                health = 50;
+                defense = 50;
+                mana = 100;
 
             }
             else {
