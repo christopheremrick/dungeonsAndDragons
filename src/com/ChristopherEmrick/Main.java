@@ -64,6 +64,9 @@ public class Main {
             health = damage(health, 30000, defense);
             defense = finalDef(defense, 30000);
         }
+        else {
+            System.out.println("You decide not to take the pills and carry on.");
+        }
     }
 
     public static void checkHealth(Integer health) {
