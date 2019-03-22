@@ -8,13 +8,18 @@ public class Main {
         // Classes
 
         Scanner scan = new Scanner(System.in);
+        Fight method = new Fight();
 
         String userClass= "";
         Integer health = 0;
         Integer defense = 0;
         Integer mana = 0;
+        Integer attack = 0;
+        Integer speed = 0;
         String choice = "";
         Boolean villagerKilled;
+        Boolean enterCave;
+        String fightOption;
 
         do {
             System.out.println("What class do you want to be?");
@@ -25,24 +30,32 @@ public class Main {
                 health = 150;
                 defense = 150;
                 mana = 0;
+                attack = 150;
+                speed = 50;
 
             }
             else if (userClass.equals("Rouge")) { // Rouge class stats
                 health = 50;
                 defense = 50;
                 mana = 0;
+                attack = 100;
+                speed = 150;
 
             }
             else if (userClass.equals("Archer")) { // Archer class stats
                 health = 100;
                 defense = 100;
                 mana = 0;
+                attack = 100;
+                speed = 100;
 
             }
             else if (userClass.equals("Mage")) { // Mage class stats
                 health = 50;
                 defense = 50;
                 mana = 100;
+                attack = 50;
+                speed = 100;
 
             }
             else {
@@ -90,6 +103,43 @@ public class Main {
         else {
             System.out.println("You decide to do nothing and you don't talk to him.");
             villagerKilled = false;
+        }
+
+        System.out.println("You see a cave in the distance, do you want to go into it?");
+        System.out.println("Type y or n.");
+        choice = "";
+        choice = scan.nextLine();
+        do {
+            if(choice.equals("y")) {
+                enterCave = true;
+            }
+            else {
+                enterCave = false;
+            }
+        }while(choice.equals(""));
+        if(enterCave) {
+
+            Integer goblinHealth = 100;
+            System.out.println("You see a goblin in the cave! He wants to fight!");
+            System.out.println("You encounter a goblin!");
+            do {
+                System.out.println("Type attack or dodge.");
+                fightOption = scan.nextLine();
+                if (method.doDodge(fightOption)) {
+                    health = method.dodgeOrDamage(speed, health, attack, 10, 100);
+                } else {
+                    goblinHealth = method.doEnemyDamage(goblinHealth, attack);
+                }
+                if(goblinHealth > 0) {
+                    System.out.println("The goblin attacks!");
+                    health = method.damage(health, 10, defense);
+                    System.out.println("You have " + health + " health left.");
+                }
+                else {
+                    System.out.println("The goblin is dead!");
+                }
+                System.out.println("The goblin has " + goblinHealth + " health left.");
+            }while(goblinHealth > 0);
         }
     }
 
