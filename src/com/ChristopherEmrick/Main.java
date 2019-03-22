@@ -13,6 +13,7 @@ public class Main {
         Integer health = 0;
         Integer defense = 0;
         Integer mana = 0;
+        String choice = "";
 
         do {
             System.out.println("What class do you want to be?");
@@ -46,23 +47,29 @@ public class Main {
             else {
                 System.out.println("That isn't one of the classes!");
             }
-
-
-
-
         } while(!(userClass.equals("Rouge") || userClass.equals("Knight") || userClass.equals("Archer") || userClass.equals("Mage")));
 
-//      Template for 100 damage
+
 //        health = damage(health, 100, defense);
 //        defense = finalDef(defense, 100);
-//        System.out.println("You have " + health);
-//        System.out.println("You have " + defense);
 
+
+        System.out.println("Your adventure starts now!");
+
+        System.out.println("You see a cyanide pill in the distance.");
+        System.out.println("Do you want to take it? Type y or n.");
+        choice = scan.nextLine();
+        if(choice.equals("y")) {
+            System.out.println("You take 30,000 damage.");
+            health = damage(health, 30000, defense);
+            defense = finalDef(defense, 30000);
+        }
     }
 
     public static void checkHealth(Integer health) {
         if(health <= 0) {
             System.out.println("You are dead.");
+            return;
         }
         else {
             return;
