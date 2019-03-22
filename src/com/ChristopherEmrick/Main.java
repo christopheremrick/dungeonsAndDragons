@@ -1,5 +1,6 @@
 package com.ChristopherEmrick;
 
+import javax.sound.sampled.Line;
 import java.util.Scanner;
 
 public class Main {
@@ -21,7 +22,7 @@ public class Main {
         Boolean enterCave;
         String fightOption;
         Boolean goblinKilled;
-        Boolean outlaw;
+        Boolean outlaw = false;
 
         do {
             System.out.println("What class do you want to be?");
@@ -125,6 +126,7 @@ public class Main {
             System.out.println("You see a goblin in the cave! He wants to fight!");
             System.out.println("You encounter a goblin!");
             do {
+                line();
                 System.out.println("Type attack or dodge.");
                 fightOption = scan.nextLine();
                 if (method.doDodge(fightOption)) {
@@ -140,6 +142,7 @@ public class Main {
                     System.out.println("The goblin is dead!");
                 }
                 System.out.println("You have " + health + " health left.");
+                line();
             }while(goblinHealth > 0);
             goblinKilled = true;
         }
@@ -156,6 +159,7 @@ public class Main {
         else {
             System.out.println("As you go over a hill, you can just make out a village in the distance.");
         }
+        line();
         System.out.println("You approach the village and a woman approaches you.");
         System.out.println("Villager: Hello! Traveller, have you seen my husband? He was just beyond that cave!");
         if(villagerKilled) {
@@ -182,6 +186,41 @@ public class Main {
             else {
                 System.out.println("Villager: Hmm I see, you did not slay the beast.");
             }
+        }
+        line();
+        // Guard fight
+        if(outlaw) {
+            Integer guardOne = 500;
+            System.out.println("A guard approaches, he attacks!");
+            System.out.println("You encounter a guard!");
+            do {
+                line();
+                System.out.println("Type attack or dodge.");
+                fightOption = scan.nextLine();
+                if (method.doDodge(fightOption)) {
+                    health = method.dodgeOrDamage(speed, health, attack, 50, guardOne);
+                } else {
+                    guardOne = method.doEnemyDamage(guardOne, attack);
+                }
+                if(guardOne > 0) {
+                    System.out.println("The guard attacks!");
+                    health = method.damage(health, 50, defense);
+                }
+                else {
+                    System.out.println("The guard is dead!");
+                }
+                System.out.println("You have " + health + " health left.");
+                line();
+            }while(guardOne > 0);
+            line();
+            System.out.println("The fight is over. You look at the guards dead body and decide to take his armor.");
+            System.out.println("You gain new armor! + 50 defense.");
+            defense = defense + 50;
+
+        }
+        else {
+            System.out.println("You head into the village.");
+            System.out.println("");
         }
     }
 
@@ -217,6 +256,6 @@ public class Main {
         }
     }
     private static void line() {
-        System.out.println("+---------------------------------------------------------------------------+");
+        System.out.println("+-----------------------------------------------------------------------------------------------------------------------------------+");
     }
 }
