@@ -18,8 +18,9 @@ public class Main {
 
             if (userClass.equals("Knight")) { // Knight class stats
 
-            } else if (userClass.equals("Rouge")) { // Rouge class stats
-                
+            }
+            else if (userClass.equals("Rouge")) { // Rouge class stats
+
 
             }
             else if (userClass.equals("Archer")) { // Archer class stats
