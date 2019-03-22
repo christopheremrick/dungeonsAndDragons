@@ -76,6 +76,7 @@ public class Main {
         else {
             health = health;
         }
+        checkHealth(health);
         return health;
     }
     public static Integer doArmorCalc(Integer defense, Integer damage) { // 150, 100, returns 50
