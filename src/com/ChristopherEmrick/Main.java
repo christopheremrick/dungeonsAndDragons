@@ -89,6 +89,7 @@ public class Main {
         }
         else {
             System.out.println("You decide to do nothing and you don't talk to him.");
+            villagerKilled = false;
         }
     }
 
