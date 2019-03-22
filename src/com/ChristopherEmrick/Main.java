@@ -48,4 +48,11 @@ public class Main {
             }
         } while(!(userClass.equals("Rouge") || userClass.equals("Knight") || userClass.equals("Archer") || userClass.equals("Mage")));
     }
+    
+    public static void checkHealth(Integer health) {
+        if(health == 0) {
+            System.out.println("You are dead.");
+            return;
+        }
+    }
 }
