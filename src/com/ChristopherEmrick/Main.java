@@ -14,6 +14,7 @@ public class Main {
         Integer defense = 0;
         Integer mana = 0;
         String choice = "";
+        Boolean villagerKilled;
 
         do {
             System.out.println("What class do you want to be?");
@@ -67,12 +68,34 @@ public class Main {
         else {
             System.out.println("You decide not to take the pills and carry on.");
         }
+
+        System.out.println("You see a man in the distance.");
+        System.out.println("Type fight to fight or talk to talk");
+        choice = scan.nextLine();
+        if(choice.equals("fight")) {
+            System.out.println("Villager: Why?");
+            System.out.println("You take 10 damage.");
+            health = damage(health, 10, defense);
+            defense = finalDef(defense, 10);
+            System.out.println("You enchant your armor with his blood: + 20 defense.");
+            defense = defense  + 20;
+            villagerKilled = true;
+        }
+        else if(choice.equals("talk")) {
+            System.out.println("Thanks for not killing me dude. Here, take this!");
+            System.out.println("You receive better armor. + 50 defense.");
+            defense = defense  + 50;
+            villagerKilled = false;
+        }
+        else {
+            System.out.println("You decide to do nothing and you don't talk to him.");
+        }
     }
 
     public static void checkHealth(Integer health) {
         if(health <= 0) {
             System.out.println("You are dead.");
-            return;
+            System.exit(0);
         }
         else {
             return;
