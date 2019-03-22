@@ -46,13 +46,47 @@ public class Main {
             else {
                 System.out.println("That isn't one of the classes!");
             }
+
+
+
+
         } while(!(userClass.equals("Rouge") || userClass.equals("Knight") || userClass.equals("Archer") || userClass.equals("Mage")));
+
+//      Template for 100 damage
+//        health = damage(health, 100, defense);
+//        defense = finalDef(defense, 100);
+//        System.out.println("You have " + health);
+//        System.out.println("You have " + defense);
+
     }
 
     public static void checkHealth(Integer health) {
         if(health <= 0) {
             System.out.println("You are dead.");
+        }
+        else {
             return;
+        }
+    }
+    public static Integer damage(Integer health, Integer damage, Integer defense) {
+
+        if(doArmorCalc(defense, damage) < 0){ // if armor is less than 0, we add negative armor from health to get damage not absorbed
+            health = health + doArmorCalc(defense, damage);
+        }
+        else {
+            health = health;
+        }
+        return health;
+    }
+    public static Integer doArmorCalc(Integer defense, Integer damage) { // 150, 100, returns 50
+            return defense - damage;
+    }
+    public static Integer finalDef(Integer defense, Integer damage) {
+        if(doArmorCalc(defense, damage) > 0) {
+            return doArmorCalc(defense, damage);
+        }
+        else {
+            return 0;
         }
     }
 }
