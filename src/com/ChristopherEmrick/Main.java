@@ -216,11 +216,11 @@ public class Main {
             System.out.println("The fight is over. You look at the guards dead body and decide to take his armor.");
             System.out.println("You gain new armor! + 50 defense.");
             defense = defense + 50;
+            line();
 
         }
         else {
             System.out.println("You head into the village.");
-            System.out.println("");
         }
     }
 

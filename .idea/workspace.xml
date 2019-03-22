@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="668fbcc8-d0e1-4783-b985-277cd474f3f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dungeonsAndDragons/com/ChristopherEmrick/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dungeonsAndDragons/com/ChristopherEmrick/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ChristopherEmrick/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ChristopherEmrick/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="668fbcc8-d0e1-4783-b985-277cd474f3f5" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +14,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ChristopherEmrick/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="175" column="17" lean-forward="true" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="17" />
+            <state relative-caret-position="573">
+              <caret line="222" column="32" selection-start-line="222" selection-start-column="32" selection-end-line="222" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8996#8997#0" expanded="true" />
+                <element signature="e#9363#9364#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,7 +82,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553285887778" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553286145257" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
@@ -169,11 +165,11 @@
     <entry file="file://$PROJECT_DIR$/src/com/ChristopherEmrick/Fight.java" />
     <entry file="file://$PROJECT_DIR$/src/com/ChristopherEmrick/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="175" column="17" lean-forward="true" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="17" />
+        <state relative-caret-position="573">
+          <caret line="222" column="32" selection-start-line="222" selection-start-column="32" selection-end-line="222" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8996#8997#0" expanded="true" />
+            <element signature="e#9363#9364#0" expanded="true" />
           </folding>
         </state>
       </provider>
